@@ -1,7 +1,6 @@
 from application.jobs.workers import celery
-from datetime import datetime
 from celery.schedules import crontab #This is for scheduling a task
-from flask import current_app as app  #for logging
+
 
 
 from application.data.database import db
@@ -11,23 +10,15 @@ from application.jobs import send_email
 
 @celery.on_after_configure.connect
 def setup_periodic_task(sender, **kwargs):
-    sender.add_periodic_task(3600.0, email_reminnder.s("Hourly"), name='Hourly remainder') #60x60=3600
-    sender.add_periodic_task(300.0, email_reminnder.s("Daily"), name='Daily remainder') #60x60X24=86400
-    sender.add_periodic_task(604800.0, email_reminnder.s("Weekly"), name='Weekly remainder') #60x60X24x7=604800
-    sender.add_periodic_task(120.0, email_reminnder.s("Monthly"), name='Monthly remainder') #60x60X24x30=2592000
-    #sender.add_periodic_task(crontab(minute=34), print_current_time_job.s(), name='add every 50 sec') #Crontab Import missing
+    # celery crontab uses UTC (IST = UTC+5.30)
+    # config changes like (CELERY_TIMEZONE = "Asia/Calcutta") & (CELERY_ENABLE_UTC = False) didn't work
+    # so put IST-5.30 in crontab
+    sender.add_periodic_task(crontab(minute=30), email_reminnder.s("Hourly"), name='Hourly remainder')
+    sender.add_periodic_task(crontab(hour=11, minute=30), email_reminnder.s("Daily"), name='Daily remainder')
+    sender.add_periodic_task(crontab(day_of_week=1, hour=11, minute=30), email_reminnder.s("Weekly"), name='Weekly remainder')
+    sender.add_periodic_task(crontab(day_of_month=1, hour=11, minute=30), email_reminnder.s("Monthly"), name='Monthly remainder')
+    #sender.add_periodic_task(300.0, email_reminnder.s("Daily"), name='Daily remainder') #Tor testing
 
-
-
-@celery.task()
-def print_current_time_job():
-    print("START")
-    now = datetime.now()
-    print("Now in task =", now)
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    print("date and time =", dt_string)
-    print("COMPLETE")
-    return dt_string
 
 
 

@@ -3,15 +3,10 @@ import React, {useState} from 'react'
 function Loginform() {
     const [email, setEmail] = useState("");
     const [password, setPassword ] = useState("");
-    const [object, setObject] = useState(null);
-    const [auth_token, setAuth_token] = useState(null);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        alert(`Email: ${email}, Password: ${password}`);
-        const em= `${email}`;
-        const ps = `${password}`;
-        const data = { "email": em, "password": ps };
+        const data = { "email": `${email}`, "password": `${password}` };
         console.log(data)
         const url = "http://localhost:8080/login?include_auth_token"
         await fetch(url, {
@@ -22,17 +17,11 @@ function Loginform() {
             body: JSON.stringify(data),
             })
             .then(response => response.json())
-            .then(data => setObject(data['response']))
+            .then(data => window.localStorage.setItem("auth_token", data.response.user.authentication_token))
+            .then(function(){window.localStorage.setItem("email", `${email}`)})
             .catch((error) => {
                 console.error('Error:', error);
-            });  
-        // const user = this.state.object['user'];
-        console.log({object})
-        // const user = {object['user']};
-        let x = setAuth_token(user['authentication_token']);
-        console.log(`${auth_token}`);
-        const key = "auth_token"
-        window.localStorage.setItem(key, this.auth_token);
+            });
     }
 
     return (

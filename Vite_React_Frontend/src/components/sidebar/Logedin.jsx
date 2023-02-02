@@ -5,10 +5,14 @@ function Logedin() {
         getUser();
     }, []);
 
+    const [email, setEmail] = useState("");
     const [user, setUser] = useState({});
 
     const getUser = async () => {
         const email = window.localStorage.getItem("email")
+        if (email) {
+            (function() {setEmail(email)}()) //IIFE
+        }
         const token = window.localStorage.getItem("auth_token")
         const url = "http://localhost:8080/user/"+email
         await fetch(url, {headers: {'Content-Type': 'application/json', 'Authentication-Token': token} } ) //Fetching current user details from database
@@ -17,11 +21,18 @@ function Logedin() {
         .catch((error) => {
             console.error('Error:', error);
         });
+        //The value of email or user should be passed as props to render automatically.
     }
 
-    if (user){
+    const Logout = () => {
+        localStorage.clear();
+        window.location.href = 'http://localhost:5173';
+    }
+
+    if (email){
         return (
             <div>
+                <button onClick={Logout}>Logout</button>
                 <h1>{user.uname}</h1>
                 <h2>{user.email}</h2>
                 <h3>Sex: {user.gender}</h3>

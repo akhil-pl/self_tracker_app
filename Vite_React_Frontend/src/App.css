@@ -1,11 +1,11 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#App{
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 20% 80%;
+#App {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
 }

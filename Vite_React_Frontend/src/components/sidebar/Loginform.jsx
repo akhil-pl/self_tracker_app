@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 function Loginform() {
     const [email, setEmail] = useState("");
-    const [password, setPassword ] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -12,16 +12,17 @@ function Loginform() {
         await fetch(url, {
             method: 'POST',
             headers: {
-            'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-            })
+        })
             .then(response => response.json())
             .then(data => window.localStorage.setItem("auth_token", data.response.user.authentication_token))
-            .then(function(){window.localStorage.setItem("email", `${email}`)})
+            .then(function () { window.localStorage.setItem("email", `${email}`) })
             .catch((error) => {
                 console.error('Error:', error);
             });
+        window.location.href = 'http://localhost:5173';
     }
 
     return (

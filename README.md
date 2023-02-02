@@ -2,12 +2,13 @@
 
 A web app for tracking any aspect of a user's daily life.
 
-> This project is basically aimed at enhancing my coding skills. So there will be different versions of the same app, like:
+> This project is still in development and is basically aimed at enhancing my coding skills. So there will be different versions of the same app, like:
 >
 > - Backend & Frontend in the same server
 > - Seperate Backend & Frontend server
 >
 > *Will be using different frameworks for each versions*
+> *Details of each versions is available in the "readme.md" file inside the curresponding directory.*
 
 
 
@@ -17,7 +18,7 @@ The aim of the project is to build a self-tracking app, in which user is able to
 
 ## DB Schema
 
-![ER Diagram!](../ER Diagram.png "ER Diagram")
+![ER Diagram!](./ER Diagram.png "ER Diagram")
 
 This is the ER diagram of the database schema. Apart from all primary keys, *email* in **user** table and *tname* in **tracker** table is having a unique constrain. **Trackertype** table is a one-to-many relation table of user table and tracker table. This allows the user to customise any tracker based on their preferred type (Numeric, Boolean, Rating, Multiple-choice) and frequency (Hourly, Daily, Weekly, Monthly)
 

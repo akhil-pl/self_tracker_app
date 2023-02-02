@@ -18,7 +18,7 @@ The aim of the project is to build a self-tracking app, in which user is able to
 
 ## DB Schema
 
-![ER Diagram!](./ER Diagram.png "ER Diagram")
+![ER Diagram!](ER Diagram.png "ER Diagram")
 
 This is the ER diagram of the database schema. Apart from all primary keys, *email* in **user** table and *tname* in **tracker** table is having a unique constrain. **Trackertype** table is a one-to-many relation table of user table and tracker table. This allows the user to customise any tracker based on their preferred type (Numeric, Boolean, Rating, Multiple-choice) and frequency (Hourly, Daily, Weekly, Monthly)
 

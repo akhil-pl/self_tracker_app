@@ -28,7 +28,7 @@ function App() {
     return (
         <div className="App" id='App'>
             <Sidebar user={user} setUser={setUser} />
-            <Mainbar user={user} />
+            <Mainbar />
         </div>
     )
 }

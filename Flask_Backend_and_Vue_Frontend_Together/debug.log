@@ -2910,3 +2910,49 @@
 2023-02-03 13:00:03,961 INFO werkzeug Thread-140 (process_request_thread) : 127.0.0.1 - - [03/Feb/2023 13:00:03] "GET /user/he@akhil.com HTTP/1.1" 200 -
 2023-02-03 13:00:04,048 INFO werkzeug Thread-141 (process_request_thread) : 127.0.0.1 - - [03/Feb/2023 13:00:04] "GET /user/he@akhil.com HTTP/1.1" 200 -
 2023-02-03 13:00:04,093 INFO werkzeug Thread-142 (process_request_thread) : 127.0.0.1 - - [03/Feb/2023 13:00:04] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 22:54:52,927 WARNING root MainThread : no boto3 module found
+2023-02-07 22:54:53,204 DEBUG passlib.registry MainThread : registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2023-02-07 22:54:53,245 DEBUG passlib.registry MainThread : registered 'argon2' handler: <class 'passlib.handlers.argon2.argon2'>
+2023-02-07 22:54:53,295 DEBUG passlib.registry MainThread : registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+2023-02-07 22:54:53,295 DEBUG passlib.registry MainThread : registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+2023-02-07 22:54:53,327 DEBUG passlib.registry MainThread : registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+2023-02-07 22:54:53,328 DEBUG passlib.registry MainThread : registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+2023-02-07 22:54:53,366 DEBUG passlib.registry MainThread : registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+2023-02-07 22:54:53,442 DEBUG passlib.registry MainThread : registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+2023-02-07 22:54:54,546 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.29.218:8080
+2023-02-07 22:54:54,546 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-07 22:54:54,578 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-07 22:55:01,085 WARNING root MainThread : no boto3 module found
+2023-02-07 22:55:01,201 DEBUG passlib.registry MainThread : registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2023-02-07 22:55:01,212 DEBUG passlib.registry MainThread : registered 'argon2' handler: <class 'passlib.handlers.argon2.argon2'>
+2023-02-07 22:55:01,232 DEBUG passlib.registry MainThread : registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+2023-02-07 22:55:01,232 DEBUG passlib.registry MainThread : registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+2023-02-07 22:55:01,241 DEBUG passlib.registry MainThread : registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+2023-02-07 22:55:01,241 DEBUG passlib.registry MainThread : registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+2023-02-07 22:55:01,249 DEBUG passlib.registry MainThread : registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+2023-02-07 22:55:01,265 DEBUG passlib.registry MainThread : registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+2023-02-07 22:55:01,669 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-07 22:55:01,708 INFO werkzeug MainThread :  * Debugger PIN: 769-738-658
+2023-02-07 22:55:41,606 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:55:41] "GET / HTTP/1.1" 200 -
+2023-02-07 22:55:41,758 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:55:41] "[36mGET /static/sidebar.js HTTP/1.1[0m" 304 -
+2023-02-07 22:55:41,761 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:55:41] "[36mGET /static/index.js HTTP/1.1[0m" 304 -
+2023-02-07 22:55:41,762 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:55:41] "[36mGET /static/tokenlogin.js HTTP/1.1[0m" 304 -
+2023-02-07 22:55:41,766 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:55:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-02-07 22:56:04,058 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:56:04] "OPTIONS /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 22:56:04,365 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:56:04] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 22:56:04,416 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:56:04] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 22:56:04,455 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:56:04] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 22:56:04,495 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 22:56:04] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 23:49:45,596 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 23:49:45] "OPTIONS /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 23:49:45,828 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 23:49:45] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 23:49:45,914 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 23:49:45] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 23:49:45,970 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 23:49:45] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-07 23:49:46,009 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [07/Feb/2023 23:49:46] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-08 00:17:06,619 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [08/Feb/2023 00:17:06] "OPTIONS /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-08 00:17:06,661 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [08/Feb/2023 00:17:06] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-08 00:17:06,702 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [08/Feb/2023 00:17:06] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-08 00:17:06,736 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [08/Feb/2023 00:17:06] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-08 00:17:06,762 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [08/Feb/2023 00:17:06] "GET /user/he@akhil.com HTTP/1.1" 200 -

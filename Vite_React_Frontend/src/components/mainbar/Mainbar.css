@@ -1,3 +1,9 @@
 .Mainbar {
     background-color: lightgray;
 }
+
+.Mainbar {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}

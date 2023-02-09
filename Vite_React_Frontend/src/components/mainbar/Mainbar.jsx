@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import styled from "styled-components";
 
 import './Mainbar.css'
 
@@ -47,11 +48,15 @@ const Mainbar = () => {
         )
     }
     return (
-        <div className='Mainbar'>
-            Mainbar
-            Please Register or Login
-        </div>
+        <MainbarNotLogin>
+            <h1>Please Register or Login</h1>
+        </MainbarNotLogin>
     )
 }
+
+const MainbarNotLogin = styled.div`
+    background-color: aqua;
+    height: 100vh;
+`;
 
 export default Mainbar

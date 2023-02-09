@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 import './Mainbar.css'
+import Navbar from './Navbar';
+import Dashboard from './Dashboard';
+import About from './About';
+import Contact from './Contact';
 
 const Mainbar = () => {
     useEffect(() => {
@@ -36,7 +41,14 @@ const Mainbar = () => {
     if (email) {
         return (
             <div className='Mainbar'>
-                Mainbar
+                <BrowserRouter>
+                    <Navbar />
+                    <Routes>
+                        <Route path='/' element={<Dashboard />} />
+                        <Route path='/About' element={<About />} />
+                        <Route path='/Contact' element={<Contact />} />
+                    </Routes>
+                </BrowserRouter>
                 {userTrackers.map((tracker) => {
                     return (
                         <div key={tracker.tid}>

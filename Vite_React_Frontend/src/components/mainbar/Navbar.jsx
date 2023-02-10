@@ -9,16 +9,13 @@ function Navbar() {
   return (
     <List>
         <NavLink to={'/'}>
-            <RxDashboard />
-            <h1>Dashboard</h1>
+            <h1><RxDashboard />Dashboard</h1>
         </NavLink>
         <NavLink to={'/About'}>
-            <FcAbout />
-            <h1>About</h1>
+            <h1><FcAbout />About</h1>
         </NavLink>
         <NavLink to={'/Contact'}>
-            <FcBusinessContact />
-            <h1>Contact Us</h1>
+            <h1><FcBusinessContact />Contact Us</h1>
         </NavLink>
     </List>
   )
@@ -26,8 +23,10 @@ function Navbar() {
 
 const List = styled.div`
     display: flex;
-    justify-content: center;
-    margin: 2rem 0rem;
+    justify-content: left;
+    column-gap: 70px;
+    background-color: black;
+    height: 10%;
 `;
 
 export default Navbar;

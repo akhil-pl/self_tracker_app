@@ -3092,3 +3092,29 @@
 2023-02-10 01:05:20,491 INFO werkzeug Thread-107 (process_request_thread) : 127.0.0.1 - - [10/Feb/2023 01:05:20] "GET /user/he@akhil.com HTTP/1.1" 200 -
 2023-02-10 01:05:20,553 INFO werkzeug Thread-108 (process_request_thread) : 127.0.0.1 - - [10/Feb/2023 01:05:20] "GET /user/he@akhil.com HTTP/1.1" 200 -
 2023-02-10 01:05:20,590 INFO werkzeug Thread-109 (process_request_thread) : 127.0.0.1 - - [10/Feb/2023 01:05:20] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-10 09:04:49,980 WARNING root MainThread : no boto3 module found
+2023-02-10 09:04:50,487 DEBUG passlib.registry MainThread : registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2023-02-10 09:04:50,529 DEBUG passlib.registry MainThread : registered 'argon2' handler: <class 'passlib.handlers.argon2.argon2'>
+2023-02-10 09:04:50,602 DEBUG passlib.registry MainThread : registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+2023-02-10 09:04:50,604 DEBUG passlib.registry MainThread : registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+2023-02-10 09:04:50,642 DEBUG passlib.registry MainThread : registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+2023-02-10 09:04:50,643 DEBUG passlib.registry MainThread : registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+2023-02-10 09:04:50,680 DEBUG passlib.registry MainThread : registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+2023-02-10 09:04:50,733 DEBUG passlib.registry MainThread : registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+2023-02-10 09:04:51,914 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.25.86:8080
+2023-02-10 09:04:51,914 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-10 09:04:51,942 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-10 09:04:58,558 WARNING root MainThread : no boto3 module found
+2023-02-10 09:04:58,672 DEBUG passlib.registry MainThread : registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2023-02-10 09:04:58,716 DEBUG passlib.registry MainThread : registered 'argon2' handler: <class 'passlib.handlers.argon2.argon2'>
+2023-02-10 09:04:58,770 DEBUG passlib.registry MainThread : registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+2023-02-10 09:04:58,771 DEBUG passlib.registry MainThread : registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+2023-02-10 09:04:58,797 DEBUG passlib.registry MainThread : registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+2023-02-10 09:04:58,798 DEBUG passlib.registry MainThread : registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+2023-02-10 09:04:58,824 DEBUG passlib.registry MainThread : registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+2023-02-10 09:04:58,877 DEBUG passlib.registry MainThread : registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+2023-02-10 09:04:59,446 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-10 09:04:59,486 INFO werkzeug MainThread :  * Debugger PIN: 720-922-610

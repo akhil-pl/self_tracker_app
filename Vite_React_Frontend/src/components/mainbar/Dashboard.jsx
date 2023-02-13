@@ -34,11 +34,15 @@ function Dashboard() {
                 });
         }
     }
+    function ShowList(tname) {
+        setViewTracker(tname);
+        console.log("Clicked: ", tname);
+    }
 
     if (email) {
         return (
             <DashboardLogin>
-                <Trackerlist userTrackers={userTrackers} setViewTracker={setViewTracker} />
+                <Trackerlist userTrackers={userTrackers} ShowList={ShowList} />
                 <TrackerDetails viewTracker={viewTracker} />
             </DashboardLogin>
         )

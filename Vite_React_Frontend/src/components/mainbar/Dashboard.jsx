@@ -33,11 +33,11 @@ function Dashboard() {
                     console.error('Error:', error);
                 });
         }
-    }
+    };
     function ShowList(tname) {
         setViewTracker(tname);
         console.log("Clicked: ", tname);
-    }
+    };
 
     if (email) {
         return (

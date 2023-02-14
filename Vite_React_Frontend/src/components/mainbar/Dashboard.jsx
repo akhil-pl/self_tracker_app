@@ -36,7 +36,6 @@ function Dashboard() {
     };
     function ShowList(tname) {
         setViewTracker(tname);
-        console.log("Clicked: ", tname);
     };
 
     if (email) {

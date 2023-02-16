@@ -1,48 +1,25 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 
-export function ListButtons(props) {
+function Trackerlist(props) {
     const [active, setActive] = useState("");
 
     return (
-        <div>
+        <TrackerlistCSS>
+            Select a Tracker
             {props.userTrackers.map((tracker) =>(
                 <ListButtonToggleCSS
                 key={tracker.tid}
                 active={active === tracker.tname} //To make only the active list button highlight. But not working properly
                 onClick={() => {props.ShowList(tracker.tname); setActive(tracker.tname)}}
-            >
-                {tracker.tname}
-            </ListButtonToggleCSS>
+                >
+                    {tracker.tname}
+                </ListButtonToggleCSS>
             ))}
-        </div>
+        </TrackerlistCSS>
     )
 };
 
-export function Trackerlist(props) {
-
-    // const ListButtons = props.userTrackers.map((tracker) => {
-    //     const [active, setActive] = useState("");
-
-    //     return (
-    //         <ListButtonToggleCSS
-    //             key={tracker.tid}
-    //             active={active === tracker.tname} //To make only the active list button highlight. But not working properly
-    //             onClick={() => {props.ShowList(tracker.tname); setActive(tracker.tname)}}
-    //         >
-    //             {tracker.tname}
-    //         </ListButtonToggleCSS>
-    //     );
-    // });
-   
-    return (
-        <TrackerlistCSS>
-            Tracker list
-            {ListButtons}
-            
-        </TrackerlistCSS>
-    )
-}
 
 const TrackerlistCSS = styled.div`
     background-color: aqua;
@@ -52,7 +29,7 @@ const TrackerlistCSS = styled.div`
 // Link to this button styling: https://react.school/ui/button
 const theme = {
     blue: {
-      default: "#3f51b5",
+      default: "#a52a2a",
       hover: "#283593"
     },
     pink: {
@@ -64,6 +41,7 @@ const ListButtonCSS = styled.button`
     background-color: ${(props) => theme[props.theme].default};
     color: white;
     padding: 5px 15px;
+    display: block;
     border-radius: 5px;
     outline: 0;
     text-transform: uppercase;
@@ -93,4 +71,35 @@ const ListButtonToggleCSS = styled(ListButtonCSS)`
 
 
 
-// export default Trackerlist
+export default Trackerlist
+
+
+
+
+
+
+
+// function Trackerlist(props) {
+
+    // const ListButtons = props.userTrackers.map((tracker) => {
+    //     const [active, setActive] = useState("");
+
+    //     return (
+    //         <ListButtonToggleCSS
+    //             key={tracker.tid}
+    //             active={active === tracker.tname} //To make only the active list button highlight. But not working properly
+    //             onClick={() => {props.ShowList(tracker.tname); setActive(tracker.tname)}}
+    //         >
+    //             {tracker.tname}
+    //         </ListButtonToggleCSS>
+    //     );
+    // });
+   
+    // return (
+    //     <TrackerlistCSS>
+    //         Tracker list
+    //         {ListButtons}
+            
+    //     </TrackerlistCSS>
+    // )
+// };

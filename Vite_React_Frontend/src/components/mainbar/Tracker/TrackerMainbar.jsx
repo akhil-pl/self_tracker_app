@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import CreateTracker from './CreateTracker';
-import Trackerlist from './Trackerlist';
+import {Trackerlist, ListButtons} from './Trackerlist';
 
 function TrackerMainbar(props) {
   return (
     <TrackerMainbarCSS>
         <CreateTracker />
-        <Trackerlist userTrackers={props.userTrackers} ShowList={props.ShowList} />
+        <Trackerlist />
+        <ListButtons userTrackers={props.userTrackers} ShowList={props.ShowList} />
     </TrackerMainbarCSS>
   )
 };

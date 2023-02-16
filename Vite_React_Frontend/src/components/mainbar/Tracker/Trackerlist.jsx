@@ -1,26 +1,44 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 
-function Trackerlist(props) {
+export function ListButtons(props) {
+    const [active, setActive] = useState("");
 
-    const listButtons = props.userTrackers.map((tracker) => {
-        const [active, setActive] = useState("");
-
-        return (
-            <ListButtonToggleCSS
+    return (
+        <div>
+            {props.userTrackers.map((tracker) =>(
+                <ListButtonToggleCSS
                 key={tracker.tid}
                 active={active === tracker.tname} //To make only the active list button highlight. But not working properly
                 onClick={() => {props.ShowList(tracker.tname); setActive(tracker.tname)}}
             >
                 {tracker.tname}
             </ListButtonToggleCSS>
-        );
-    });
+            ))}
+        </div>
+    )
+};
+
+export function Trackerlist(props) {
+
+    // const ListButtons = props.userTrackers.map((tracker) => {
+    //     const [active, setActive] = useState("");
+
+    //     return (
+    //         <ListButtonToggleCSS
+    //             key={tracker.tid}
+    //             active={active === tracker.tname} //To make only the active list button highlight. But not working properly
+    //             onClick={() => {props.ShowList(tracker.tname); setActive(tracker.tname)}}
+    //         >
+    //             {tracker.tname}
+    //         </ListButtonToggleCSS>
+    //     );
+    // });
    
     return (
         <TrackerlistCSS>
             Tracker list
-            {listButtons}
+            {ListButtons}
             
         </TrackerlistCSS>
     )
@@ -75,4 +93,4 @@ const ListButtonToggleCSS = styled(ListButtonCSS)`
 
 
 
-export default Trackerlist
+// export default Trackerlist

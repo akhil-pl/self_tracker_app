@@ -37,7 +37,7 @@ const Contacts = styled.div`
     font-family: fantasy;
     justify-content: center;
     h3{
-        font-family: fantasy;
+        font-family: cursive;
     }
 `;
 

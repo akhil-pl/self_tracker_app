@@ -24,6 +24,7 @@ const Mainbar = () => {
 
 const MainbarDiv = styled.div`
     background-color: lightgray;
+    font-family: Impact, Helvetica, sans-serif;
 `
 
 export default Mainbar

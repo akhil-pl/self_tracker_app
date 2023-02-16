@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
 
-import Trackerlist from './Trackerlist';
-import TrackerDetails from './TrackerDetails';
+import TrackerMainbar from './Tracker/TrackerMainbar';
+import TrackerDetails from './Tracker/TrackerDetails';
 
 function Dashboard() {
     useEffect(() => {
@@ -41,7 +41,7 @@ function Dashboard() {
     if (email) {
         return (
             <DashboardLogin>
-                <Trackerlist userTrackers={userTrackers} ShowList={ShowList} />
+                <TrackerMainbar userTrackers={userTrackers} ShowList={ShowList} />
                 <TrackerDetails viewTracker={viewTracker} />
             </DashboardLogin>
         )

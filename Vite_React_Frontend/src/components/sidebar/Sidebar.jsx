@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
-import './Sidebar.css'
 import RegisterForm from './RegisterForm'
 import Loginform from './Loginform'
 import Logedin from './Logedin'
@@ -33,21 +33,27 @@ function Sidebar(props) {
 
     if (email) {
         return (
-            <div className='Sidebar'>
+            <SidebarDiv>
                 Sidebar
                 <Logedin user={props.user} />
-            </div>
+            </SidebarDiv>
         )
     }
     return (
-        <div className='Sidebar'>
+        <SidebarDiv>
             Sidebar
             <button onClick={viewRegisterForm}>Register</button>
             <button onClick={viewLoginForm}>Login</button>
             {loginForm ? <Loginform /> : ""}
             {registerForm ? <RegisterForm /> : ""}
-        </div>
+        </SidebarDiv>
     )
-}
+};
+
+const SidebarDiv = styled.div`
+    background-color: black;
+    color: white;
+    font-family: 'Julee', cursive, sans-serif;
+`
 
 export default Sidebar

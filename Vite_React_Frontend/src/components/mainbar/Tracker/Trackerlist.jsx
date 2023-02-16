@@ -8,9 +8,9 @@ function Trackerlist(props) {
 
         return (
             <ListButtonToggleCSS
-                    key={tracker.tid}
-                    active={active === tracker.tname} //To make only the active list button highlight. But not working properly
-                    onClick={() => {props.ShowList(tracker.tname); setActive(tracker.tname)}}
+                key={tracker.tid}
+                active={active === tracker.tname} //To make only the active list button highlight. But not working properly
+                onClick={() => {props.ShowList(tracker.tname); setActive(tracker.tname)}}
             >
                 {tracker.tname}
             </ListButtonToggleCSS>

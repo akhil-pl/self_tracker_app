@@ -27,6 +27,9 @@ const List = styled.div`
     column-gap: 70px;
     background-color: black;
     height: 10%;
+    h1 {
+        display: inline;
+    }
 `;
 
 export default Navbar;

@@ -1,4 +1,7 @@
-# Local Development Run
+# Backend server
+This is a backend server alone version of the application. This version is only able to respond to api requests, so for the application to work smoothly you need a seperate frontend that can communicate with this application.
+
+## Local Development Run
 - Run 'local_setup.sh' in a linux shell
     This will create a virtual environment folder '.env' if not present already
     Then it will activate the virtual environment and install all packages listed in "requirements.txt"
@@ -17,13 +20,11 @@
 
 
 
-# Folder Structure
+## Folder Structure
 
 - `application` is where our application code is
 - `db_directory` has the sqlite DB. It can be anywhere on the machine. Adjust the path in ``application/config.py`. Repo ships with one required for testing.
 - `Open API yaml` has the yaml file of Open API specification is stored
-- `static` is where JS and CSS files are stored
-- `templates` - Default flask templates folder
 
 
 ```
@@ -51,25 +52,6 @@
 │   └── testdb.sqlite3
 ├── Open API yaml
 │   └── openapi.yaml
-├── static
-│   ├── index.js
-│   ├── sidebar.js
-│   ├── style.css
-│   └── tokenlogin.js
-├── templates
-│   ├── security   
-│   │   ├── login_user.html
-│   │   └── register_user.html
-│   ├── 404.html    
-│   ├── downl.pdf
-│   ├── email.html    
-│   ├── home.html
-│   ├── logs.html
-│   ├── master.html
-│   ├── master.html
-│   ├── remainderemail.html
-│   ├── sidebar.html
-│   └── you.html
 ├── debug.log
 ├── local_beat.sh
 ├── local_run.sh

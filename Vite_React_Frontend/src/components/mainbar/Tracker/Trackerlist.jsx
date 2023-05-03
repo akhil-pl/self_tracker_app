@@ -24,6 +24,7 @@ function Trackerlist(props) {
 const TrackerlistCSS = styled.div`
     background-color: aqua;
     align-self: stretch;
+    flex: 1;
 `;
 
 // Link to this button styling: https://react.school/ui/button
